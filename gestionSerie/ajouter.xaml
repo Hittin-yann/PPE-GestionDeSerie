@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="gestionSerie.ajouter"
+             NavigationPage.HasNavigationBar="false">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Black">
+            <Label Text="Quel série regardez-vous ?" FontSize="Title" Padding="30,10,30,10" TextColor="Gray"/>
+            <Frame BorderColor="Gray" CornerRadius="20" BackgroundColor="Black" Padding="0,2,0,0" Margin="5,0,5,0">
+                <Entry x:Name="nomSerie" Placeholder="Nom de la série" PlaceholderColor="Gray" Keyboard="Text" Margin="10,0,10,0" TextColor="Gray" />
+            </Frame>
+            <Entry x:Name="numeroSaison" Placeholder="Numéro de saison" Keyboard="Numeric" Margin="10,0,10,0" PlaceholderColor="Gray" TextColor="Gray" />
+            <Entry x:Name="numDernierEpisode" Placeholder="Episode actuel" Keyboard="Numeric" Margin="10,0,10,0" TextColor="Gray" PlaceholderColor="Gray" />
+            <Frame BorderColor="Gray" CornerRadius="20" BackgroundColor="Black" Padding="0,2,0,0" Margin="70,0,70,0">
+                <Button Margin="10,3,10,5" x:Name="BTajouter" Clicked="BTajouter_Clicked" Text="Ajouter" BackgroundColor="Black" TextColor="Gray"/>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

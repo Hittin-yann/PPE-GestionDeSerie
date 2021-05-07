@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="gestionSerie.RegistreSerie"
+             NavigationPage.HasNavigationBar="false">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Black">
+            <Label HorizontalOptions="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span x:Name="label" FontAttributes="Bold" TextColor="Red" FontSize="16"/>
+                        <Span Text="&#10;" />
+                        <Span x:Name="span" TextColor="Red" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Button Text="Back" TextColor="Red" BorderColor="Red" Clicked="Button_Clicked" CornerRadius="10" Margin="50,0,50,0" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

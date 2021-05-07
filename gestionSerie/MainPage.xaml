@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="gestionSerie.MainPage"
+             NavigationPage.HasNavigationBar="false">
+
+    <StackLayout BackgroundColor="Black">
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Bienvenue sur le gestionnnaire de série !" HorizontalTextAlignment="Center" TextColor="White" FontSize="30"/>
+        </Frame>
+        <Label Text="Voici vos séries !" FontSize="Title" Padding="30,10,30,10" TextColor="Gray"/>
+        <ListView x:Name="SerieView" RowHeight="60" SeparatorColor="Red" SelectedItem="">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Label FontSize="16" >
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="{Binding Nom}" FontAttributes="Bold" TextColor="Red"/>
+                                    <Span Text="&#10;" />
+                                    <Span Text="Saison : " TextColor="Red"/>
+                                    <Span Text="{Binding TextidSaison}" TextColor="Red"/>
+                                    <Span Text=" Episode : " TextColor="Red"/>
+                                    <Span Text="{Binding TextidEpisode}" TextColor="Red"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="Ajouter" Clicked="Button_Clicked"/>
+    </StackLayout>
+
+</ContentPage>
